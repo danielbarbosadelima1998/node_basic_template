@@ -2,7 +2,7 @@
 - cp .env.example .env
 # Instalar dependências
 - yarn
-# para utilizar CLI 
+# Para utilizar CLI 
 - yarn lerna exec --parallel yarn 
 # Criar containers
 - docker-compose up -d --force-recreate --build

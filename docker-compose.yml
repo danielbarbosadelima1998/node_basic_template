@@ -3,21 +3,25 @@ services:
   api:
     container_name: api
     build:
-      context: ./back
+      context: ./packages/back
       dockerfile: Dockerfile
     image: api
     restart: always
     ports:
       - 4000:4000
+    networks:
+      - app-net
   # front:
   #   container_name: front
   #   build:
-  #     context: ./front
+  #     context: ./packages/front
   #     dockerfile: Dockerfile
   #   image: front
   #   restart: always
   #   ports:
   #     - 4444:4444
+  # networks:
+  #     - app-net
   postgresql:
     container_name: postgres
     image: postgres
@@ -30,6 +34,6 @@ services:
       - 5432:5432
     # shm_size: '256mb'
     # command: 'postgres -c max_connections=500'
-# networks:
-#   app-net:
-#     driver: bridge
+networks:
+  app-net:
+    driver: bridge
