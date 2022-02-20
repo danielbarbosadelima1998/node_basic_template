@@ -2,7 +2,7 @@
   "name": "node_basic",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Daniel Barbosa de Lima <daniel.lima@ikatec.com.br>",
+  "author": "Daniel Barbosa de Lima <daniel-barbosadelima@hotmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only --ignore /node_modules --no-notify src/server.ts",
