@@ -8,5 +8,5 @@
 - docker-compose up -d --force-recreate --build
 
 # Pronto, aplicação já está rodando, acesso:
-- Back: http://localhost:port
-- Front: http://localhost:port
+- Back: http://localhost:4000
+- Front: http://localhost:3000
