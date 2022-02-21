@@ -8,7 +8,7 @@ const app = () => {
 
   const httpServer = http.createServer(express);
 
-  httpServer.listen(process.env.PORT,() => console.log(`Running on ${PORT}`))
+  httpServer.listen(PORT,() => console.log(`Running on ${PORT}`))
 };
 
 export default app();
