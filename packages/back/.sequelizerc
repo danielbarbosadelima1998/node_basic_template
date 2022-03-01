@@ -1,0 +1,12 @@
+require('dotenv').config();
+const path = require('path');
+
+const basePath = process.env.NODE_ENV === 'development' ? 'src' : './';
+const configFile = process.env.NODE_ENV === 'development' ? 'database.ts' : 'database.js';
+
+module.exports = {
+  config: path.resolve(basePath, 'core', 'databases', 'sequelize', 'config', configFile),
+  'models-path': path.resolve(basePath, 'core', 'databases', 'sequelize', 'models'),
+  'seeders-path': path.resolve(basePath, 'core', 'databases', 'sequelize', 'seeders'),
+  'migrations-path': path.resolve(basePath, 'core', 'databases', 'sequelize', 'migrations'),
+};
