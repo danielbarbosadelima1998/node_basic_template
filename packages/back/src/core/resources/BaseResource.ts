@@ -14,6 +14,8 @@ export default class BaseResource<T> {
     this.findByPk = this.findByPk.bind(this);
     this.findMany = this.findMany.bind(this);
     this.findManyPaginated = this.findManyPaginated.bind(this);
+    this.destroy = this.destroy.bind(this);
+    this.destroyById = this.destroyById.bind(this);
   }
 
   async findOne(options?: Options): Promise<T> {
@@ -30,5 +32,11 @@ export default class BaseResource<T> {
   }
   async findManyPaginated(options?: PaginatedOptions): Promise<T[]> {
     return [];
+  }
+  async destroy(options?: Options): Promise<any> {
+    return this.repository.destroy(options);
+  }
+  async destroyById(id: string): Promise<any> {
+    return this.repository.destroy({ where: { id } });
   }
 }

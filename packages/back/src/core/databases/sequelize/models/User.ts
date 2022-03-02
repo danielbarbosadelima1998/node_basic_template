@@ -18,7 +18,8 @@ const User = sequelize.define<Model<UserInstance, UserCreationAttributes>>(
   "User",
   {
     id: {
-      type: DataTypes.UUIDV4,
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
     },
     name: DataTypes.STRING,
@@ -35,11 +36,11 @@ const User = sequelize.define<Model<UserInstance, UserCreationAttributes>>(
   }
 );
 
-User.associate = (models) => {
-  User.belongsTo(models.account, {
-    as: "account",
-    foreignKey: "accountId",
-  });
-};
+// User.associate = (models) => {
+// User.belongsTo(models.account, {
+//   as: "account",
+//   foreignKey: "accountId",
+// });
+// };
 
 export default User;

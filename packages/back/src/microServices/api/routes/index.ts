@@ -1,13 +1,8 @@
-import { Router } from 'express';
+import user from "./user";
+import { Router } from "express";
 
-const controller = {
-  health: (req, res) => {
-    res.send('ok');
-  },
-};
+const router = Router();
 
-const routes = Router();
+router.use("/users", user);
 
-routes.get('/', controller.health);
-
-export default routes;
+export default router;
