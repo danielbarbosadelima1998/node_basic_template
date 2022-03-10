@@ -1,8 +1,15 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './views/Home'
+import About from './views/About'
+
 const App = () => {
   return (
-    <div >
-      <h1>Welcome</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+      </Routes>
+    </Router>
   )
 }
 
