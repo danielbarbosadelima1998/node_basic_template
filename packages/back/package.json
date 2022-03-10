@@ -1,9 +1,9 @@
 {
-  "name": "node_basic",
+  "name": "back",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "author": "Daniel Barbosa de Lima <daniel-barbosadelima@hotmail.com>",
-  "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only --ignore /node_modules --no-notify src/microServices/api/app.ts",
     "build": "rm -rf dist && babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",

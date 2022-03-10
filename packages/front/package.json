@@ -1,7 +1,8 @@
 {
-  "name": "vite-react-ts",
+  "name": "front",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
+  "author": "Daniel Barbosa de Lima <daniel-barbosadelima@hotmail.com>",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
