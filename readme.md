@@ -5,7 +5,7 @@
 # Para utilizar CLI 
 - yarn lerna exec --parallel yarn 
 # Criar containers
-- docker-compose up -d --force-recreate --build
+- docker-compose up -d
 
 # Pronto, aplicação já está rodando, acesso:
 - Back: http://localhost:4000
