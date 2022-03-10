@@ -1,4 +1,5 @@
-# Variáveis de ambiente
+# Variáveis de ambiente/
+Em: packages/back e packages/front rodar:
 - cp .env.example .env
 # Instalar dependências
 - yarn
