@@ -1,6 +1,6 @@
-import { Sequelize, Op } from "sequelize";
+import { Sequelize, Op } from 'sequelize';
 
-const configDb = require("../databases/sequelize/config/database");
+import configDb from '../databases/sequelize/config/database';
 
 // @ts-ignore
 const config = configDb[process.env.NODE_ENV];
@@ -54,7 +54,7 @@ const sequelize = new Sequelize(
     port: config.port,
     operatorsAliases,
     logging: false,
-  }
+  },
 );
 
 export default sequelize;

@@ -1,9 +1,9 @@
-import BaseResource from "../../resources/BaseResource";
+import BaseResource from '../../resources/BaseResource';
 
 const resourceController = (
   resource: BaseResource<any>,
   transformer = (m) => m,
-  includeWhiteList = []
+  includeWhiteList = [],
 ) => {
   const index = async (req, res) => {
     const response = await resource.findManyPaginated();
@@ -25,7 +25,9 @@ const resourceController = (
     return res.json(response);
   };
 
-  return { index, show, create, update, destroy };
+  return {
+    index, show, create, update, destroy,
+  };
 };
 
 export default resourceController;

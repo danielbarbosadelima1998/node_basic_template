@@ -1,4 +1,4 @@
-import { Model, ModelStatic } from "sequelize";
+import { Model, ModelStatic } from 'sequelize';
 
 export type Options = {
   where?: any;
@@ -31,18 +31,23 @@ export default class BaseRepository<T> {
   async findOne(options?: Options): Promise<T> {
     return this.model.findOne(options);
   }
+
   async findByPk(pk: string): Promise<T> {
     return this.model.findByPk(pk);
   }
+
   async findById(id: string): Promise<T> {
     return this.model.findOne({ where: { id } });
   }
+
   async findMany(options?: Options): Promise<T[]> {
     return this.model.findAll(options);
   }
+
   async findManyPaginated(options?: PaginatedOptions): Promise<T[]> {
     return [];
   }
+
   async destroy(options?: Options): Promise<any> {
     return this.model.destroy(options);
   }

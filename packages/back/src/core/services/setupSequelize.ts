@@ -10,7 +10,7 @@ export const initAssociations = () => {
     });
     associated = true;
   }
-  return models
+  return models;
 };
 
 export const destroy = async () => sequelize.close();

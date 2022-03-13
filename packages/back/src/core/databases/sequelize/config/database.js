@@ -1,10 +1,10 @@
 require('dotenv').config();
 
-if (process.env.NODE_ENV !== 'production') {
-  require('@babel/register')({
-    extensions: ['.js', '.ts'],
-  });
-}
+// if (process.env.NODE_ENV !== 'production') {
+//   require('@babel/register')({
+//     extensions: ['.js', '.ts'],
+//   });
+// }
 
 module.exports = {
   development: {
@@ -15,5 +15,5 @@ module.exports = {
     port: Number(process.env.POSTGRES_DB_PORT),
     dialect: process.env.POSTGRES_DB_DIALECT,
     logging: false,
-  }
-}
+  },
+};
