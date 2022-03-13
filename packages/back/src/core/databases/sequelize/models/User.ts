@@ -1,5 +1,5 @@
-import Sequelize, { Model, Optional } from "sequelize";
-import sequelize from "../../../services/sequelize";
+import Sequelize, { Model, Optional } from 'sequelize';
+import sequelize from '../../../services/sequelize';
 
 const { DataTypes } = Sequelize;
 
@@ -12,10 +12,10 @@ export type UserInstance = {
   account?: any;
 };
 
-type UserCreationAttributes = Optional<UserInstance, "id">;
+type UserCreationAttributes = Optional<UserInstance, 'id'>;
 
 const User = sequelize.define<Model<UserInstance, UserCreationAttributes>>(
-  "User",
+  'User',
   {
     id: {
       type: DataTypes.UUID,
@@ -31,9 +31,9 @@ const User = sequelize.define<Model<UserInstance, UserCreationAttributes>>(
     password: DataTypes.STRING,
   },
   {
-    tableName: "users",
+    tableName: 'users',
     paranoid: true,
-  }
+  },
 );
 
 // User.associate = (models) => {
